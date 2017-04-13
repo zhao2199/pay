@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html ng-app="app" >
+<head>
+    <title>通用模板</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="lib/angular.js"></script>
+</head>
+<body ng-controller="ctrl">
+    <header class="head">
+        <i class="fa fa fa-chevron-left"></i>
+        <h1>订单支付</h1>
+        <span class="fa fa-comment-o"></span>
+    </header>
+
+    <section class="content">
+        <div class="address">
+            <p>路飞<span>15210030805</span></p>
+            <h2><i class="fa fa-map-marker"></i>北京市海淀区上地七街软件园南站八维研修学院</h2>
+        </div>
+        <div class="bottom">
+            <img src="images/b_02.png" alt="">
+        </div>
+        <div class="main">
+            <h1>恒之然旗舰店</h1>
+            <dl>
+                <dt><img src="images/1_08.png"></dt>
+                <dd>
+                    <p>维维嚼益嚼水果大豆棒橙味维嚼益嚼水果大豆棒橙味</p>
+                    <div>
+                        <h3>
+                            <p>￥<span>{{price}}</span>.00</p>
+                            <s>￥1000.00</s>
+                        </h3>
+                        <h4>
+                            <span class="jian" ng-click="del()">-</span>
+                            <span class="num">{{num}}</span>
+                            <span class="jia" ng-click="add()" >+</span>
+                        </h4>
+                    </div>
+                </dd>
+            </dl>
+            <div class="money">
+            <p>商品总金额：<span>￥{{prices}}.00</span></p>
+            <p>运费: <span>￥10.00</span></p>
+            <p>总额（含运费）：<span style="color:red">￥{{count}}.00</span></p>
+        </div>
+        </div>
+        <div class="pay">
+            <ul class="nav">
+                <li>
+                    <span>余额支付 ￥100.00</span>
+                    <label class="toggle-radio">
+                    <input type="checkbox" ng-model="flag" ng-click="click()">
+                    <span class="track">
+                        <i class="icon"></i>
+                    </span>
+                </label>
+                </li>
+                <li>
+                    <span>奖金支付 ￥100.00</span>
+                    <label class="toggle-radio">
+                        <input type="checkbox" ng-model="flag1" ng-click="click()">
+                    <span class="track">
+                        <i class="icon"></i>
+                    </span>
+                    </label>
+                </li>
+                <li>
+                    <span>其他支付方式</span>
+                    <i class="fa fa-chevron-right"></i>
+                </li>
+            </ul>
+        </div>
+    </section>
+        <footer class="footer">
+            <div class="left">
+                <p>总计:￥{{total}}.00</p>
+                <span>(含运费)</span>
+            </div>
+            <div class="right">
+                提交订单
+            </div>
+        </footer>
+    <script src="lib/angular.js"></script>
+    <script>
+        var app=angular.module('app',[]);
+        app.controller("ctrl",function($scope){
+            $scope.num=1;
+            $scope.price=988;//单价
+            $scope.prices=988;//商品总金额
+            $scope.count=988+10;//总额（含运费）
+            $scope.total=998;//总计
+
+            $scope.del=function(){
+                if($scope.num>1){
+                    $scope.num--;
+                    $scope.prices=$scope.num*$scope.price;
+                    $scope.count=$scope.prices+10;
+                }
+                $scope.click();
+            }
+            $scope.add=function(){
+                $scope.num++;
+                $scope.prices=$scope.num*$scope.price;
+                $scope.count=$scope.prices+10;
+                $scope.click();
+            }
+    //按钮
+            $scope.click=function(){
+                if($scope.flag==true && $scope.flag1==true){
+                    $scope.total=$scope.count-200;
+                }else if($scope.flag==true || $scope.flag1==true){
+                    $scope.total=$scope.count-100;
+                }else{
+                    $scope.total=$scope.count;
+                }
+            }
+       })
+    </script>
+</body>
+</html>

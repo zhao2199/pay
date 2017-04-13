@@ -1,0 +1,192 @@
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden; }
+
+.head {
+  height: 4.2rem;
+  line-height: 4.2rem;
+  position: relative;
+  border-bottom: 1px solid #eeeeee; }
+  .head h1 {
+    font-weight: 100;
+    text-align: center; }
+  .head i {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 18px; }
+  .head span {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 18px; }
+
+.content {
+  flex: 1;
+  overflow-y: scroll;
+  box-sizing: border-box; }
+
+.address p {
+  margin-top: 18px;
+  margin-left: 3.2rem;
+  margin-bottom: 1rem;
+  font-size: 16px; }
+  .address p span {
+    margin-left: 2rem;
+    font-size: 14px; }
+.address h2 {
+  margin-left: 18px;
+  font-weight: 100; }
+  .address h2 i {
+    margin-right: 10px; }
+
+.bottom {
+  margin-top: 15px; }
+  .bottom img {
+    width: 100%;
+    height: 12px; }
+
+.main {
+  height: 24.2rem;
+  border-bottom: 10px solid #eeeeee; }
+  .main h1 {
+    font-weight: 100;
+    margin-top: 10px;
+    margin-left: 2rem; }
+  .main dl {
+    display: -webkit-flex;
+    justify-content: space-around;
+    margin-top: 18px; }
+    .main dl dt img {
+      width: 10rem;
+      height: 10rem;
+      margin-left: 15px;
+      margin-right: 10px; }
+    .main dl dd p {
+      font-size: 14px; }
+    .main dl dd div {
+      display: -webkit-flex;
+      justify-content: space-around; }
+      .main dl dd div h3 {
+        margin-top: 3rem; }
+        .main dl dd div h3 p {
+          font-size: 14px;
+          color: #fc4141; }
+        .main dl dd div h3 s {
+          color: #999999;
+          font-weight: 100; }
+      .main dl dd div h4 {
+        display: -webkit-flex;
+        justify-content: space-around;
+        margin-top: 3.5rem;
+        width: 7rem;
+        height: 2rem;
+        border: 1px solid #eeeeee;
+        border-radius: 5px;
+        font-size: 14px; }
+        .main dl dd div h4 .jian {
+          border-right: 1px solid #eeeeee;
+          padding-right: 5px; }
+        .main dl dd div h4 .jia {
+          border-left: 1px solid #eeeeee;
+          padding-left: 5px; }
+  .main .money {
+    margin-top: 2rem; }
+    .main .money .red {
+      font-size: 16px;
+      color: #fc4141;
+      font-weight: bold; }
+    .main .money p {
+      display: -webkit-flex;
+      justify-content: space-between;
+      padding-left: 15px;
+      padding-right: 15px;
+      line-height: 25px;
+      font-size: 14px;
+      color: #8c8c8c; }
+
+.pay .nav li {
+  height: 4rem;
+  border-bottom: 1px solid #eeeeee;
+  line-height: 3.7rem;
+  font-size: 14px;
+  margin-left: 15px;
+  display: -webkit-flex;
+  justify-content: space-between; }
+.pay .nav i {
+  font-size: 18px;
+  margin-right: 12px;
+  margin-top: 12px;
+  color: #999999; }
+.pay .nav .toggle-radio {
+  margin-top: 8px; }
+.pay .nav .toggle-radio input {
+  display: none; }
+.pay .nav .toggle-radio input:checked + .track,
+.pay .nav .toggle-radio input:checked + .track-icon {
+  background-color: #4cd964;
+  border-color: #4cd964; }
+.pay .nav .toggle-radio input:checked + .track .icon,
+.pay .nav .toggle-radio input:checked + .track-icon::after {
+  margin-left: 24px; }
+.pay .nav .toggle-radio .track,
+.pay .nav .toggle-radio .track-icon {
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+  margin-right: 20px;
+  box-sizing: border-box; }
+.pay .nav .toggle-radio .track .icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 24px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: -4px;
+  -webkit-transition: margin-left .5s; }
+.pay .nav .toggle-radio .track-icon::after {
+  content: "";
+  width: 24px;
+  height: 26px;
+  display: block;
+  border-radius: 24px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-left: 0;
+  -webkit-transition: margin-left .5s; }
+
+.footer {
+  height: 5rem;
+  border-top: 10px solid #eeeeee;
+  display: -webkit-flex;
+  justify-content: space-between; }
+  .footer .right {
+    background: #fc4141;
+    width: 40%;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 5rem; }
+  .footer .left p {
+    font-size: 14px;
+    color: #fc4141;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    margin-left: 6rem; }
+  .footer .left span {
+    margin-left: 9rem; }
+
+/*# sourceMappingURL=style.css.map */
